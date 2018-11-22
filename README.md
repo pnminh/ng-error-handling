@@ -1,6 +1,7 @@
 # NgErrorHandling
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
+Refer to the article [Error Handling & Angular](https://medium.com/@aleixsuau/error-handling-angular-859d529fa53a) by Aleix Suau
 
 ## Development server
 
