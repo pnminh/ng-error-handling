@@ -18,7 +18,7 @@ export class ErrorHandlerService implements ErrorHandler {
     } else {
       console.log('some client side error', error);
       //this.notificationService.notify('some client side error: ' + error);
-      routerService.navigate(['/error']);
+      routerService.navigate(['/error'], {queryParams: {message: `${error.message}`}});
     }
   }
 

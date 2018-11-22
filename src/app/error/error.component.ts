@@ -1,3 +1,4 @@
+import { ActivatedRoute, Params, Data } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./error.component.css']
 })
 export class ErrorComponent implements OnInit {
-
-  constructor() { }
+  routeParams: Params;
+  data: Data;
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
+    this.routeParams = this.activatedRoute.snapshot.queryParams;
+    this.data = this.activatedRoute.snapshot.data;
   }
-
 }
