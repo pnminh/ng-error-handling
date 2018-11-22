@@ -1,0 +1,16 @@
+<app-notification></app-notification>
+<div class="alert alert-danger" *ngIf="notificationService.notification$|async as notification">
+  {{notification}}
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text" *ngIf="googleResponse$|async as googleResponse">Google Result:{{googleResponse|slice:0:10}}</p>
+    <input type="button" value="Ask Google" (click)="callGoogle()">
+    <input type="button" value="Call Server Error" (click)="callServerError()">
+    <input type="button" value="Call Client Error" (click)="callClientError()">
+    <input type="button" value="Call Server Offline" (click)="callServerOffline()">
+  </div>
+</div>

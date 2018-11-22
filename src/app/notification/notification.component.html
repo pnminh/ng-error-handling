@@ -1,0 +1,7 @@
+<div class="alert alert-danger" *ngIf="notificationService.notification$|async as notification" [@hideShowAnimatorWithNgIf]>
+  {{notification}}
+</div>
+<div  class="alert alert-danger" [@hideShowAnimator]='isShown'>
+    test this
+  </div>
+  <div><input type="button" value="Click" (click)="click()"></div>
