@@ -9,6 +9,7 @@ import { NotificationService } from './notification.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'ng-error-handling';
+  ngOnInit(): void {
+  }
 
 }
